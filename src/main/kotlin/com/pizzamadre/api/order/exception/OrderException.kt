@@ -1,3 +1,3 @@
-package com.pizzamadre.api.order.exceptions
+package com.pizzamadre.api.order.exception
 
 class OrderException(message: String?) : Exception(message)

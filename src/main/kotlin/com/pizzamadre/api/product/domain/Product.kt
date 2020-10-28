@@ -5,11 +5,7 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "product")
-data class Product(val name: String, val description: String, val image: String, val category: Category, val price: BigDecimal) {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    val id: Long = 0L
+data class Product(@Id @GeneratedValue(strategy = GenerationType.AUTO) val id: Long? = null, val name: String, val description: String, val image: String, val category: Category, val price: BigDecimal) {
 }
 
 enum class Category {
