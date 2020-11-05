@@ -1,6 +1,6 @@
 package com.pizzamadre.api.order.domain
 
-import com.pizzamadre.api.lineItem.LineItem
+import com.pizzamadre.api.lineItem.domain.LineItem
 import javax.persistence.*
 
 @Entity

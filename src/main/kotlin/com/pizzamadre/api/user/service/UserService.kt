@@ -42,7 +42,7 @@ class UserService : IUserService {
     @Throws(UserException::class, NotFoundException::class)
     override fun modify(user: User): User {
         try {
-            get(user.id)
+            get(user.id!!)
             return userRepository!!.save(user)
         } catch (e: Exception) {
             when (e) {

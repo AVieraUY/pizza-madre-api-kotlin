@@ -41,7 +41,7 @@ class ProductService : IProductService {
     @Throws(ProductException::class, NotFoundException::class)
     override fun modify(product: Product): Product {
         try {
-            get(product.id)
+            get(product.id!!)
             return productRepository!!.save(product)
         } catch (e: Exception) {
             when (e) {

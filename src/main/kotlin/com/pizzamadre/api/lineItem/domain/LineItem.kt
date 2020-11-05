@@ -1,4 +1,4 @@
-package com.pizzamadre.api.lineItem
+package com.pizzamadre.api.lineItem.domain
 
 import com.pizzamadre.api.order.domain.Order
 import com.pizzamadre.api.product.domain.Product

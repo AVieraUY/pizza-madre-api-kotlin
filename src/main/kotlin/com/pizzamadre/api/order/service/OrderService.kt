@@ -41,7 +41,7 @@ class OrderService : IOrderService {
     @Throws(OrderException::class, NotFoundException::class)
     override fun modify(order: Order): Order {
         try {
-            get(order.id)
+            get(order.id!!)
             return orderRepository!!.save(order)
         } catch (e: Exception) {
             when (e) {
