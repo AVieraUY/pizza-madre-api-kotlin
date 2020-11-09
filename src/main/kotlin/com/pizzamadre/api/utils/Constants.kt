@@ -9,5 +9,6 @@ class Constants {
         const val URL_BASE_USER = "$URL_BASE/users"
         const val URL_BASE_PRODUCT = "$URL_BASE/products"
         const val URL_BASE_ORDER = "$URL_BASE/orders"
+        const val URL_BASE_LINE_ITEM = "$URL_BASE/line-items"
     }
 }

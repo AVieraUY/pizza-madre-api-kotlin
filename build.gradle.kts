@@ -7,6 +7,7 @@ plugins {
     kotlin("jvm") version "1.3.72"
     kotlin("plugin.spring") version "1.3.72"
     kotlin("plugin.jpa") version "1.3.72"
+    kotlin("kapt") version "1.3.72"
 }
 
 group = "com.pizzamadre"
@@ -22,6 +23,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("io.springfox:springfox-boot-starter:3.0.0")
+    implementation("org.mapstruct:mapstruct:1.4.1.Final")
+    kapt("org.mapstruct:mapstruct-processor:1.4.1.Final")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.jetbrains.kotlin:kotlin-reflect")

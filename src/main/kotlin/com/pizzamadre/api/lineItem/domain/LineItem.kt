@@ -7,4 +7,6 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "line_item")
-data class LineItem(@Id @GeneratedValue(strategy = GenerationType.AUTO) val id: Long? = null, val quantity: Long, val price: BigDecimal, @ManyToOne val order: Order, @ManyToOne val product: Product)
+data class LineItem(@Id @GeneratedValue(strategy = GenerationType.AUTO) val id: Long? = null, val quantity: Long, val price: BigDecimal, @ManyToOne @JoinColumn(name = "order_id", referencedColumnName = "id") val order: Order, @ManyToOne val product: Product) {
+//    constructor()
+}
