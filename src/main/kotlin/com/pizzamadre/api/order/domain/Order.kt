@@ -5,8 +5,9 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "order")
-data class Order(@Id @GeneratedValue(strategy = GenerationType.AUTO) val id: Long? = null, val userId: Long, val paymentMethod: PaymentMethod, @OneToMany(mappedBy = "order") val items: List<LineItem>) {
-//    constructor()
+data class Order(@Id @GeneratedValue(strategy = GenerationType.AUTO) var id: Long?, var userId: Long?, var paymentMethod: PaymentMethod?, @OneToMany(mappedBy = "order") var items: List<LineItem>?) {
+    // Needed by MapStruct
+    constructor(): this(null, null, null, null)
 }
 
 enum class PaymentMethod {
